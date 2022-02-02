@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator Segitiga</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <link rel="stylesheet" href="stylesheets/stylesheet.css"/>
+    </head>
+    <body>
+        <!-- Header -->
+        <!-- Judul -->
+        <div class="header">
+            <div class="title">Kalkulator Segitiga</div>
+            <div class="header-right-section">
+                <button class="about-btn" onclick="openAbout()">Tentang</button>
+            </div>
+        </div>
+
+        <!-- Bagian Identitas -->
+        <div class="about-modal">
+            <div class="about-box">
+                <div class="about-content">
+                    <div class="content-image-container"><img src="assets/svg/undraw_progressive_app_m-9-ms.svg"/></div>
+                    <div class="content-description">
+                        <p class="description-title">
+                            <b>Kalkulator Perhitungan Segitiga dengan Penerapan Prinsip Trigonometri</b>
+                        </p>
+                        <p class="description">
+                            Oleh:<br/>
+                            Muhammad Ma'ruf Firdaus, Ahmad Faiz Fadlallahi, Muhammad Fadhil Mubarak
+                        </p>
+                        <br/>
+                        <button class="about-close">Oke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Utama -->
+        <div class="main-menu">
+            <div class="function-container">
+                <div class="content-image-container"><img src="assets/svg/undraw_mathematics_-4-otb.svg"/></div>
+                <p class="function-description">Menghitung <b>luas</b> segitiga siku-siku apabila diketahui <b>panjang sisi miring</b> dan <b>salah satu besar ukuran sudut</b> selain sudut siku-siku.</p>
+                <button class="function-btn" onclick="firstFunction()">Hitung!</button>
+            </div>
+            <div class="function-container">
+                <div class="content-image-container"><img src="assets/svg/undraw_mathematics_-4-otb.svg"/></div>
+                <p class="function-description">Menghitung <b>keliling</b> segitiga siku-siku apabila diketahui <b>panjang sisi miring</b> dan <b>salah satu besar ukuran sudut</b> selain sudut siku-siku.</p>
+                <button class="function-btn" onclick="secondFunction()">Hitung!</button>
+            </div>
+        </div>
+
+        <!-- Antarmuka Bagian Fungsi -->
+        <!-- Antarmuka Fungsi 1 -->
+        <div class="function1-modal">
+            <div class="function1-box">
+                <span class="function1-close">&times;</span>
+                <div class="function1-content">
+                    <div class="content-image-container"><img src="assets/svg/undraw_programming_re_kg9v.svg"/></div>
+                    <div class="content-description">
+                        <form class="function-form" name="function1" action="" method="get">
+                            Masukkan ukuran sudut dalam satuan derajat:<br/>
+                            <input class="function-input" id="firstfunctionangle" type="number" name="firstfunctionangle" value=""><br/><br/>
+                            Masukkan ukuran panjang sisi miring dalam satuan cm:<br/>
+                            <input class="function-input" id="firstfunctionlength" type="number" name="firstfunctionlength" value=""><br/><br/>
+                        </form>
+                        <button class="function-form-btn" onclick="firstResult()">Selesai</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antarmuka Jawaban Fungsi 1 -->
+        <div class="answer1-modal">
+            <div class="answer1-box">
+                <div class="answer1-content">
+                    <div class="content-image-container"><img src="assets/svg/undraw_quiz_nlyh.svg"/></div>
+                    <div class="content-description">
+                        Dari nilai ukuran sudut yang dimasukkan maka diketahui nilai sin sebesar <b><span class="sinvalue"></span></b>, dan nilai cos sebesar <b><span class="cosvalue"></span></b>,<br/><br/>
+                        Untuk mencari ukuran panjang kedua sisi tegak maka digunakan perkalian sin dan cos dengan ukuran panjang sisi miring,<br/><br/>
+                        Hasil perkalian ukuran panjang sisi miring dengan nilai sin adalah <b><span class="sinlength"></span></b> cm,<br/><br/>
+                        Hasil perkalian ukuran panjang sisi miring dengan nilai cos adalah <b><span class="coslength"></span></b> cm,<br/><br/>
+                        Dari semua nilai yang sudah didapat maka dapat dihitung ukuran luas segitiga,<br/><br/>
+                        0.5 x <b><span class="sinlength"></span></b> x <b><span class="coslength"></span></b> = <b><span class="answer"></span></b> cm
+                        <br/><br/>
+                        <button class="answer1-close">Oke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antarmuka Fungsi 2 -->
+        <div class="function2-modal">
+            <div class="function2-box">
+                <span class="function2-close">&times;</span>
+                <div class="function2-content">
+                    <div class="content-image-container"><img src="assets/svg/undraw_programming_re_kg9v.svg"/></div>
+                    <div class="content-description">
+                        <form class="function-form" name="function2" action="" method="get">
+                            Masukkan ukuran sudut dalam satuan derajat:<br/>
+                            <input class="function-input" id="secondfunctionangle" type="number" name="secondfunctionangle" value=""><br/><br/>
+                            Masukkan ukuran panjang sisi miring dalam satuan cm:<br/>
+                            <input class="function-input" id="secondfunctionlength" type="number" name="secondfunctionlength" value=""><br/><br/>
+                        </form>
+                        <button class="function-form-btn" onclick="secondResult()">Selesai</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Antarmuka Jawaban Fungsi 2 -->
+        <div class="answer2-modal">
+            <div class="answer2-box">
+                <div class="answer2-content">
+                    <div class="content-image-container"><img src="assets/svg/undraw_quiz_nlyh.svg"/></div>
+                    <div class="content-description">
+                        Dari nilai ukuran sudut yang dimasukkan maka diketahui nilai sin sebesar <b><span class="sinvalue"></span></b>, dan nilai cos sebesar <b><span class="cosvalue"></span></b>,<br/><br/>
+                        Untuk mencari ukuran panjang kedua sisi tegak maka digunakan perkalian sin dan cos dengan ukuran panjang sisi miring,<br/><br/>
+                        Hasil perkalian ukuran panjang sisi miring dengan nilai sin adalah <b><span class="sinlength"></span></b> cm,<br/><br/>
+                        Hasil perkalian ukuran panjang sisi miring dengan nilai cos adalah <b><span class="coslength"></span></b> cm,<br/><br/>
+                        Dari semua nilai yang sudah didapat maka dapat dihitung ukuran keliling segitiga,<br/><br/>
+                        <b><span class="length"></span></span></b> + <b><span class="sinlength"></span></b> + <b><span class="coslength"></span></b> = <b><span class="answer"></span></b> cm
+                        <br/><br/>
+                        <button class="answer2-close">Oke</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pemuat Skrip -->
+        <script src="scripts/function.js"></script>
+    </body>
+</html>

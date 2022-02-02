@@ -1,0 +1,393 @@
+/* Font */
+@font-face{
+    font-family: Mulish;
+    src: url(../assets/fonts/Mulish-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Josefin Sans;
+    src: url(../assets/fonts/JosefinSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Questrial;
+    src: url(../assets/fonts/Questrial-Regular.ttf);
+}
+
+/* Body */
+body{
+    margin: 0;
+    color: #17202a;
+    background: #273746;
+}
+button{
+    font-family: Questrial;
+    background-color: #17202a;
+    color: #fbfcfc;
+}
+button:hover{
+    background-color: #566573;
+}
+
+/* Header */
+.header{
+    font-family: Josefin Sans;
+    font-weight: bold;
+    width: auto;
+    height: 55px;
+    line-height: 55px;
+    background-color: #f0f3f4;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header-right-section{
+    display: inline;
+    float: right;
+    margin-right: 12px;
+}
+
+/* Judul */
+.title{
+    display: inline;
+    font-size: 18px;
+    float: left;
+    margin-left: 12px;
+    line-height: unset!important;
+}
+
+/* Tombol Bagian Identitas */
+.about-btn{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Antarmuka Bagian Identitas */
+.about-modal{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.about-box{
+    background-color: #f4f6f7;
+    margin: 70px 400px 70px 400px;
+    border-radius: 5px;
+    min-height: 30%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.about-content{
+    font-family: Mulish;
+    padding: 32px;
+}
+.about-content .content-image-container{
+    text-align: center;
+    height: 180px;
+    width: auto;
+    padding: 24px;
+    background-color: #fbfcfc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.about-content .content-image-container img{
+    height: 180px;
+    width: auto;
+}
+.about-content .content-description{
+    padding: 32px;
+}
+.about-content .description-title{
+    font-family: Questrial!important;
+    font-size: 24px;
+    text-align: center;
+}
+.description{
+    text-align: center;
+}
+.about-close{
+    font-family: Questrial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fbfcfc;
+    background-color: #17202a;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px;
+}
+.about-close:hover{
+    background-color: #566573;
+}
+
+/* Menu Utama */
+.main-menu{
+    background-color: #f7f9f9;
+    min-height: 80vh;
+    height: auto;
+    width: 50vw;
+    margin: 32px auto 32px auto;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Fungsi */
+.function-btn{
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.function-container{
+    padding: 10px;
+    margin: 0 auto 15px auto;
+    height: auto;
+    width: 30vw;
+    background-color: #f4f6f7;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-family: Mulish;
+    text-align: center;
+}
+.function-container .content-image-container{
+    text-align: center;
+    height: 180px;
+    width: auto;
+    padding: 24px;
+    background-color: #fbfcfC;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.function-container .content-image-container img{
+    height: 180px;
+    width: auto;
+}
+
+/* Antarmuka Bagian Fungsi */
+.function1-modal, .function2-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.function1-box, .function2-box{
+    background-color: #f4f6f7;
+    margin: 70px 400px 70px 400px;
+    border-radius: 5px;
+    min-height: 30%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.function1-close, .function2-close{
+    display: block;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    border-radius: 2px;
+    position: absolute;
+    top: 75px;
+    right: 405px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #fbfcfc;
+    background-color: #cb4335;
+}
+.function1-close:hover, .function2-close:hover{
+    color: #fbfcfc;
+    background-color: #ec7063;
+}
+.function1-content, .function2-content{
+    font-family: Mulish;
+    font-weight: bold;
+    padding: 42px 32px;
+}
+.function1-content .content-image-container, .function2-content .content-image-container{
+    text-align: center;
+    height: 180px;
+    width: auto;
+    padding: 24px;
+    background-color: #fbfcfc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.function1-content .content-image-container img, .function2-content .content-image-container img{
+    height: 180px;
+    width: auto;
+}
+.function1-content .content-description, .function2-content .content-description{
+    padding: 32px;
+}
+.function-form-btn{
+    font-family: Questrial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fbfcfc;
+    background-color: #17202a;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px;
+}
+.function-form-btn:hover{
+    background-color: #566573;
+}
+
+/* Antarmuka Bagian Jawaban Fungsi */
+.answer1-modal, .answer2-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.answer1-box, .answer2-box{
+    background-color: #f4f6f7;
+    margin: 70px 400px 70px 400px;
+    border-radius: 5px;
+    min-height: 30%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.answer1-content, .answer2-content{
+    font-family: Mulish;
+    padding: 32px;
+}
+.answer1-content .content-image-container, .answer2-content .content-image-container{
+    text-align: center;
+    height: 180px;
+    width: auto;
+    padding: 24px;
+    background-color: #fbfcfc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.answer1-content .content-image-container img, .answer2-content .content-image-container img{
+    height: 180px;
+    width: auto;
+}
+.answer1-content .content-description, .answer2-content .content-description{
+    padding: 32px;
+}
+.answer1-close, .answer2-close{
+    font-family: Questrial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fbfcfc;
+    background-color: #17202a;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 6px;
+}
+.answer1-close:hover, .answer2-close:hover{
+    background-color: #566573;
+}
+
+/* Mobile */
+@media (max-width: 1366px){
+    .about-box{
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+    .about-close{
+        right: 305px;
+    }
+    .function1-box, .function2-box, .answer1-box, .answer2-box{
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+    .function1-close, .function2-close, .answer1-close, .answer2-close{
+        right: 305px;
+    }
+}
+@media (max-width: 1024px){
+    .main-menu{
+        width: 80vw;
+    }
+    .about-box{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .about-close{
+        right: 55px;
+    }
+    .function1-box, .function2-box, .answer1-box, .answer2-box{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .function1-close, .function2-close, .answer1-close, .answer2-close{
+        right: 55px;
+    }
+    .function-container{
+        width: 50vw;
+    }
+}
+@media (max-width: 540px){
+    .about-box{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .about-content .description-title{
+        font-size: 20px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .about-close{
+        right: 30px;
+    }
+    .about-content, .function1-content, .function2-content, .answer1-content, .answer2-content{
+        text-align: center;
+    }
+    .about-content .content-description{
+        padding: 8px;
+    }
+    .function1-content .content-description, .function2-content .content-description, .answer1-content .content-description, .answer2-content .content-description{
+        padding: 32px 8px 8px 8px;
+    }
+    .function-form-btn{
+    font-size: 20px;
+    }
+    .function1-box, .function2-box, .answer1-box, .answer2-box{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .function1-close, .function2-close, .answer1-close, .answer2-close{
+        right: 30px;
+    }
+    .function-container{
+        width: 70vw;
+    }
+    .about-content .content-image-container, .function-container .content-image-container, .function1-content .content-image-container, .function2-content .content-image-container, .answer1-content .content-image-container, .answer2-content .content-image-container{
+        height: 120px;
+    }
+    .about-content .content-image-container img, .function-container .content-image-container img, .function1-content .content-image-container img, .function2-content .content-image-container img, .answer1-content .content-image-container img, .answer2-content .content-image-container img{
+        height: 120px;
+    }
+}
